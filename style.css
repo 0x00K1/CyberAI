@@ -1,56 +1,92 @@
-/* Set some basic styles for the chatbot container */
-#chat-form {
+/* Set the font family and background color for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+}
+
+/* Style the header with a background color, padding, and centered text */
+header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the heading with a large font size and no margin */
+h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+/* Style the container for the CyberAI image with flexbox */
+.image-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  padding: 10px;
-  background-color: #f2f2f2;
-  border-top: 1px solid #ccc;
+  align-items: center;
+  height: 300px;
 }
 
-/* Style the input field */
-#input {
-  flex: 1;
-  padding: 10px;
+/* Style the CyberAI image with a max width and height and a circular border */
+.cyberai-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+
+/* Style the information section with a white background, padding, and dark text */
+.info-section {
+  background-color: #fff;
+  padding: 20px;
+  color: #333;
+}
+
+/* Style the commands section with a light gray background, padding, and dark text */
+.commands-section {
+  background-color: #f2f2f2;
+  padding: 20px;
+  color: #333;
+}
+
+/* Style each command with some margin */
+.command {
+  margin: 10px 0;
+}
+
+/* Style comments with a lighter gray color */
+.comment {
+  color: #999;
+}
+
+/* Style the reset command with a red color */
+.reset {
+  color: #f00;
+}
+
+/* Add some emotions to the page with custom animations */
+.cyberai-image:hover {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1:after {
+  content: "😊";
+  margin-left: 10px;
+}
+
+.command:before {
+  content: "👉";
   margin-right: 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-/* Style the submit button */
-button[type="submit"] {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-}
-
-/* Style the chat messages container */
-#chat-messages {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #f2f2f2;
-}
-
-/* Style the user messages */
-.user-message {
-  margin-bottom: 5px;
-  padding: 5px;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 5px;
-  align-self: flex-end;
-}
-
-/* Style the bot messages */
-.bot-message {
-  margin-bottom: 5px;
-  padding: 5px;
-  background-color: #ccc;
-  color: black;
-  border-radius: 5px;
-  align-self: flex-start;
 }
