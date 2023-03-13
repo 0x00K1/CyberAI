@@ -10,7 +10,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, li {
 
 /* Add a background image to the header */
 header {
-  background-image: url('header-background.jpg');
+  background-image: url('images/CyberAI.jpg');
   background-size: cover;
   background-position: center;
   animation: header-animation 20s infinite;
