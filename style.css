@@ -1,101 +1,136 @@
-/* Reset default margin and padding for all elements */
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Set black background color */
+/* Set global font styles */
 body {
-  background-color: black;
-}
-
-/* Set sky purple font color */
-body, h1, h2, h3, h4, h5, h6, p, a {
-  color: #9b59b6;
-}
-
-/* Center content on page */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #8a2be2;
+  background-color: #000000;
 }
 
 /* Style header */
 header {
   text-align: center;
-  margin-top: 50px;
-  position: relative;
+  padding: 2rem;
 }
 
-.header-image {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
+header h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px #ffffff;
 }
 
-/* Style navigation */
+header p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-shadow: 1px 1px #ffffff;
+}
+
+/* Style navigation menu */
+nav {
+  background-color: #8a2be2;
+  padding: 0.5rem;
+}
+
 nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
   list-style: none;
-  text-align: center;
-  margin-top: 20px;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-nav ul li a {
+nav li a {
+  color: #ffffff;
   text-decoration: none;
-  color: #9b59b6;
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
-/* Style sections */
-section {
-  margin-top: 50px;
+nav li a:hover {
+  color: #ffd700;
 }
 
-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+/* Style main content */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-section ul {
-  list-style: disc;
-  margin-left: 30px;
-  margin-bottom: 20px;
+main section {
+  flex: 1 1 25rem;
+  margin: 2rem;
 }
 
-section li {
-  margin-bottom: 10px;
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px #ffffff;
+}
+
+main ul {
+  list-style: none;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-shadow: 1px 1px #ffffff;
+}
+
+main p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-shadow: 1px 1px #ffffff;
+}
+
+/* Style support section */
+#support {
+  text-align: center;
+}
+
+#support p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#support a {
+  color: #ffd700;
 }
 
 /* Style footer */
 footer {
+  background-color: #8a2be2;
   text-align: center;
-  margin-top: 50px;
-  padding: 20px;
-  color: #9b59b6;
-  background-color: #ecf0f1;
+  padding: 1rem;
 }
 
-/* Style hero image */
-.hero-image {
+footer p {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Style motion picture */
+#motion-picture {
   position: relative;
-  height: 50vh;
-  overflow: hidden;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
 }
 
-.hero-image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-height: 100%;
-  max-width: 100%;
-  filter: brightness(70%) saturate(150%) contrast(150%);
+#motion-picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   animation: pulse 5s ease-in-out infinite;
 }
 
