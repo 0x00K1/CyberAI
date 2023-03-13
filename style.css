@@ -1,68 +1,115 @@
-/* Set the background color to black */
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set black background color */
 body {
   background-color: black;
 }
 
-/* Set the font color to sky purple */
-body, h1, h2, h3, h4, h5, h6, p, a, li {
-  color: #9370DB;
+/* Set sky purple font color */
+body, h1, h2, h3, h4, h5, h6, p, a {
+  color: #9b59b6;
 }
 
-/* Add a background image to the header */
-header {
-  background-image: url('images/CyberAI.jpg');
-  background-size: cover;
-  background-position: center;
-  animation: header-animation 20s infinite;
-}
-
-/* Define a keyframe animation for the header background */
-@keyframes header-animation {
-  0% {
-    background-position: center;
-  }
-  25% {
-    background-position: 50% 25%;
-  }
-  50% {
-    background-position: 75% 50%;
-  }
-  75% {
-    background-position: 25% 75%;
-  }
-  100% {
-    background-position: center;
-  }
-}
-
-/* Set the link color and add an underline on hover */
-a {
-  color: #9370DB;
-  text-decoration: none;
-  border-bottom: 2px solid #9370DB;
-}
-
-a:hover {
-  border-bottom: none;
-}
-
-/* Add a box shadow to the main section */
+/* Center content on page */
 main {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Add padding to the sections */
-section {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* Hide the INFO section by default */
-#INFO {
-  display: none;
+/* Style header */
+header {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
 }
 
-/* Add a margin and padding to the reset button */
-#reset-button {
-  margin: 20px;
-  padding: 10px;
+.header-image {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style navigation */
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #9b59b6;
+}
+
+/* Style sections */
+section {
+  margin-top: 50px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+section ul {
+  list-style: disc;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+section li {
+  margin-bottom: 10px;
+}
+
+/* Style footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: #9b59b6;
+  background-color: #ecf0f1;
+}
+
+/* Style hero image */
+.hero-image {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.hero-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%;
+  filter: brightness(70%) saturate(150%) contrast(150%);
+  animation: pulse 5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: brightness(70%) saturate(150%) contrast(150%);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: brightness(120%) saturate(200%) contrast(200%);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: brightness(70%) saturate(150%) contrast(150%);
+  }
 }
