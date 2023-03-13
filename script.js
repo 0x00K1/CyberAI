@@ -1,28 +1,19 @@
-// Smooth scrolling effect for internal links
-$('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
-    if (target.length) {
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000);
-    }
-  });
+// Define a function to handle form submission
+function submitForm(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
   
-  // Toggle mobile menu
-  const menuIcon = document.querySelector('.menu-icon');
-  const nav = document.querySelector('nav');
+    // Get the user input from the form
+    const input = document.querySelector('#input').value;
   
-  menuIcon.addEventListener('click', () => {
-    nav.classList.toggle('show');
-  });
+    // Send the input to your AI algorithms to generate a response
+    const output = // Use your AI algorithms to generate a response based on the input
   
-  // Close mobile menu when link is clicked
-  const navLinks = document.querySelectorAll('nav ul li a');
+    // Display the output on the webpage
+    const outputEl = document.querySelector('#output');
+    outputEl.textContent = output;
+  }
   
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('show');
-    })
-  });
+  // Listen for the form submit event
+  const form = document.querySelector('#chat-form');
+  form.addEventListener('submit', submitForm);
   
