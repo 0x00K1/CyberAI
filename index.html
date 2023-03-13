@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CyberAI - Interactive Discord Bot using AI | Created by Kun</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="CyberAI is a Discord bot that uses AI to interact with users. Created by Kun.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <header>
-      <img src="images/CyberAI.jpg" alt="CyberAI logo" width="200" height="200">
-      <h1>CyberAI - Interactive Discord Bot using AI</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Commands</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <main>
-      <h2>Welcome to CyberAI</h2>
-      <p>CyberAI is a Discord bot that uses AI to interact with users. You can use it to chat, play games, and more!</p>
-      <h2>Commands</h2>
-      <p>Here are some of the commands you can use with CyberAI:</p>
-      <ul>
-        <li><code>!help</code> - Displays a list of available commands</li>
-        <li><code>!chat [message]</code> - Starts a conversation with CyberAI</li>
-        <li><code>!play [game]</code> - Plays a game with CyberAI</li>
-      </ul>
-      <h2>About</h2>
-      <p>CyberAI was created by Kun. It uses machine learning algorithms to understand and respond to user input in a natural way.</p>
-      <h2>Contact</h2>
-      <p>If you have any questions or feedback about CyberAI, you can contact Kun at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
-    </main>
-    <footer>
-      <p>&copy; 2023 CyberAI. All rights reserved.</p>
-    </footer>
-  </body>
+<head>
+  <title>CyberAI Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Add the bot image to the page -->
+  <img src="images/CyberAI.jpg" alt="CyberAI Bot" id="bot-image">
+
+  <!-- Define the HTML form for the chatbot -->
+  <form id="chat-form">
+    <input type="text" id="input" placeholder="Type your message...">
+    <button type="submit">Send</button>
+  </form>
+  <div id="chat-messages"></div>
+
+  <!-- Include the JavaScript code at the end of the HTML body -->
+  <script>
+    // Define a function to handle form submission
+    async function submitForm(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Get the user input from the form
+      const input = document.querySelector('#input').value;
+
+      // Send the input to your AI algorithms to generate a response
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ input: input })
+      });
+
+      // Parse the response from your AI algorithms
+      const output = await response.json();
+
+      // Display the output on the webpage
+      const messages = document.querySelector('#chat-messages');
+      messages.innerHTML += `
+        <div class="message user-message">${input}</div>
+        <div class="message bot-message">${output.message}</div>
+      `;
+
+      // Clear the input field
+      document.querySelector('#input').value = '';
+    }
+
+    // Listen for the form submit event
+    const form = document.querySelector('#chat-form');
+    form.addEventListener('submit', submitForm);
+  </script>
+</body>
 </html>
