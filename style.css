@@ -37,11 +37,13 @@ header {
 header h1 {
   font-size: 3rem;
   margin: 0;
+  animation: fadein 1s;
 }
 
 header p {
   font-size: 1.2rem;
   margin-top: 10px;
+  animation: slidein 1s;
 }
 
 /* Navigation styles */
@@ -61,6 +63,7 @@ nav ul {
 
 nav li {
   margin: 0 10px;
+  animation: slidein 1s;
 }
 
 /* Main section styles */
@@ -75,6 +78,7 @@ main section {
 main section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  animation: fadein 1s;
 }
 
 main section ul {
@@ -85,6 +89,7 @@ main section ul {
 
 main section li {
   margin-bottom: 10px;
+  animation: slidein 1s;
 }
 
 /* Support section styles */
@@ -96,6 +101,7 @@ main section li {
   margin-top: 10px;
   font-size: 1.2rem;
 }
+
 /* Footer styles */
 footer {
   background-color: #333;
@@ -106,4 +112,29 @@ footer {
 
 footer p {
   margin: 0;
+  animation: slidein 1s;
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+  animation: fadein 1s;
+}
+
+/* Animation styles */
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slidein {
+  from {
+      opacity: 0;
+      transform: translateX(-50%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0%);
+  }
 }
