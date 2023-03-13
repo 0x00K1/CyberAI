@@ -1,76 +1,68 @@
+/* Set the background color to black */
 body {
-  background-color: #a49bf2;
-  color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #1d1d1d;
+/* Set the font color to sky purple */
+body, h1, h2, h3, h4, h5, h6, p, a, li {
+  color: #9370DB;
 }
 
-nav ul li {
-  float: left;
-}
-
-nav ul li a {
-  display: block;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-color: #7e7e7e;
-}
-
+/* Add a background image to the header */
 header {
-  text-align: center;
-  padding: 50px;
+  background-image: url('header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: header-animation 20s infinite;
 }
 
-header h1 {
-  color: #000000;
+/* Define a keyframe animation for the header background */
+@keyframes header-animation {
+  0% {
+    background-position: center;
+  }
+  25% {
+    background-position: 50% 25%;
+  }
+  50% {
+    background-position: 75% 50%;
+  }
+  75% {
+    background-position: 25% 75%;
+  }
+  100% {
+    background-position: center;
+  }
 }
 
+/* Set the link color and add an underline on hover */
+a {
+  color: #9370DB;
+  text-decoration: none;
+  border-bottom: 2px solid #9370DB;
+}
+
+a:hover {
+  border-bottom: none;
+}
+
+/* Add a box shadow to the main section */
+main {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Add padding to the sections */
 section {
-  padding: 50px;
+  padding: 20px;
 }
 
-section h2 {
-  color: #000000;
+/* Hide the INFO section by default */
+#INFO {
+  display: none;
 }
 
-section ul {
-  list-style-type: none;
-}
-
-section ul li {
-  margin-bottom: 10px;
-}
-
-section ul li:before {
-  content: "•";
-  color: #7e7e7e;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-section p {
-  color: #000000;
-}
-
-footer {
-  text-align: center;
+/* Add a margin and padding to the reset button */
+#reset-button {
+  margin: 20px;
   padding: 10px;
-  background-color: #1d1d1d;
-}
-
-footer p {
-  color: #000000;
 }
