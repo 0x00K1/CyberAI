@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CyberAI - Your Discord Assistant</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>CyberAI - Your Discord Assistant</h1>
-    </header>
-    <div class="image-container">
-      <img class="cyberai-image" src="images/CyberAI.jpg" alt="CyberAI Image">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberAI - Your personal AI assistant</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CyberAI - Your personal AI assistant</h1>
+  </header>
+
+  <div class="image-container">
+    <img class="cyberai-image" src="images/CyberAI.jpg" alt="CyberAI">
+  </div>
+
+  <section class="info-section">
+    <h2>About me</h2>
+    <p>I'm CyberAI, your personal AI assistant. I'm here to help you with anything you need, from answering questions to providing recommendations.</p>
+    <p>My training data comes from a variety of sources, including natural language processing algorithms and machine learning models. With my advanced capabilities, I can understand your requests and provide accurate responses in real-time.</p>
+  </section>
+
+  <section class="commands-section">
+    <h2>Available commands</h2>
+
+    <div class="command">
+      <code>$INFO</code>
+      <p>This command will provide information about me, the Assistant, including my training data and capabilities.</p>
     </div>
-    <div class="info-section">
-      <h2>About CyberAI</h2>
-      <p>CyberAI is an artificial intelligence that can interact with users on your Discord server. With advanced machine learning algorithms, CyberAI can learn from conversations and provide personalized responses.</p>
-      <p>Use the available commands to learn more about CyberAI's capabilities and reset previous conversations.</p>
+
+    <div class="command reset">
+      <code>$RESET</code>
+      <p>This command allows you to delete the previous conversations with the CyberAI.</p>
     </div>
-    <div class="commands-section">
-      <h2>Available Commands</h2>
-      <p>To use CyberAI, simply type the commands below in your Discord channel:</p>
-      <div class="command">$INFO</div>
-      <p>This command will provide information about CyberAI, including training data and capabilities.</p>
-      <div class="command reset"> $Reset </div>
-      <p>This command allows you to delete previous conversations with CyberAI.</p>
-      <div class="command comment"># [Comment]</div>
-      <p>This command is for comments only and will not be processed by CyberAI.</p>
+
+    <div class="command">
+      <code># [Comment]</code>
+      <p>This command is for comments. I'll not grep the request.</p>
     </div>
-  </body>
+  </section>
+
+</body>
 </html>
