@@ -4,13 +4,212 @@
   box-sizing: border-box;
   font-family: 'poppins', sans-serif;
 }
-
+  
 .container{
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.3),transparent),url(images/CyberAI.png);
+  background: url(gallery/images/background.gif) no-repeat center center fixed;
+  background-color: black;
   background-size: cover;
-  background-position: center;
-  padding: 0 8%;
+  padding: 0 0.1%;
   position: relative;
+}
+  
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 70%;
+  width: 70%;
+  padding: 20px 30px;
+}
+  
+.logo{
+  height: 400px;
+  width: 400px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  padding: 10px 10px;
+  padding-left: 1px;
+}
+  
+nav ul{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: left;
+  padding-left: 30px;
+}
+  
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 0px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: rainbow 0.7s ease-in-out infinite;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0  ;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
+  background: black;
+}
+
+nav ul li a:hover::after{
+  width: 50%;
+}
+
+@keyframes rainbow {
+  0% {
+    background: linear-gradient(to right, #b66bff, #df4eff, #6b6bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(to right, #6b6bff, #b66bff, #df4eff);
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(to right, #df4eff, #6b6bff, #b66bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }  
+}
+
+.invite-section {
+  display: flex;
+  position: absolute;
+  margin-bottom: 20px;
+  left: 7%;
+  bottom: 10%;
+}
+
+.invite-button {
+  padding: 20px 45px;
+  background-color: #5d007f;
+  background-image: linear-gradient(to right, #df4eff, #6b6bff, #b66bff);
+  color: #000000;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.invite-button:hover {
+  background-color: #8700a2;
+}
+
+.social-icons{
+  position: absolute;
+  left: 2.5%;
+  bottom: 2%; 
+  padding: 10px;
+}
+
+.social-icons img{
+  width: 25px;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    background-size: 150%;
+  }
+    
+  nav{
+    flex-direction: column;
+    padding: 10px;
+  }
+    
+  .logo{
+    margin-bottom: 10px;
+  }
+    
+  ul{
+    margin-top: 10px;
+    justify-content: center;
+  }
+    
+  li{
+    margin: 0 5px;
+  }
+    
+  a{
+    font-size: 1rem;
+  }
+}
+  
+@media screen and (max-width: 480px){
+  .container{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    background-color: black;
+    background-size: cover;
+    padding: 0 0.1%;
+    position: relative;
+  }
+  
+  nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 70%;
+    padding: 30px 10px;
+  }
+
+  .logo{
+    height: 400px;
+    width: 400px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding-left: 100px;
+  }
+
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: left;
+    padding-left: 100px;
+  }
+    
+  nav ul li{
+    margin: 20px 0;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .invite-section{
+    left: 24%;
+    bottom: 15%;
+    align-items: center;
+  }
+
+  .social-icons{
+    left: 5%;
+    bottom: 10%;
+    align-content: center;
+    align-items: center;
+  }
 }
