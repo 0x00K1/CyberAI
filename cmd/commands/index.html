@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberAI - CMD</title>
+  <link rel="icon" href="/gallery/icons/CyberAI_icon.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="commands.css">
+</head>
+<body>
+    <h1>CyberAI</h1>
+    <div class="container">
+        <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>help</h2>
+              <p>Shows the list of commands and their details.<br><code>$help</code></p>
+              <button onclick="copyText(this)">Copy</button>
+            </div>
+          </div>          
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Ping</h2>
+            <p>Checks connectivity with discord's servers.<br><code>$ping</code></p>
+            <button onclick="copyText(this)">Copy</button>
+          </div>
+        </div>
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>About me</h2>
+            <p>Provide information about me, the Assistant, including my training data and capabilities.<br><code>$INFO</code></p>
+            <button onclick="copyText(this)">Copy</button>
+          </div>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>My Memory</h2>
+              <p>Allows you to delete the previous conversations with me. (Clearing my memory)<br><code>$Reset</code></p>
+              <button onclick="copyText(this)">Copy</button>
+            </div>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Token Check</h2>
+                <p>Provides information about the number of tokens that a user has used out of a maximum limit.<br><code>$TC</code></p>
+              <button onclick="copyText(this)">Copy</button>
+            </div>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Commments</h2>
+                <p>For comments, I'll not grep the request.<br><code># [comment]</code></p>
+              <button onclick="copyText(this)">Copy</button>
+            </div>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Conversation History</h2>
+                <p>Shows a file of all previous conversations between you and the Assistant.<br><code>$history</code></p>
+              <button onclick="copyText(this)">Copy</button>
+            </div>
+        </div>
+        <a href="/cmd">Back</a>
+    </div>
+    <script src="commands.js"></script>
+  </body>
+</html>
