@@ -5,7 +5,7 @@ html, body {
   font-family: "Monaco", Inconsolata, monospace;
   font-size: 17px;
   color: #b66bff;
-  background: url("./gallery/images/cmd.jpg") no-repeat center;
+  background: url("../gallery/images/cmd.jpg") no-repeat center;
   background-size: cover;  
   background-color: black;
 }
@@ -168,7 +168,7 @@ a:hover span:nth-child(4) {
         font-family: "Monaco", Inconsolata, monospace;
         font-size: 17px;
         color: #b66bff;
-        background: url("./gallery/images/cmd.jpg") no-repeat;
+        background: url("../gallery/images/cmd.jpg") no-repeat;
         background-size: cover;  
         background-color: black;
     }
@@ -230,7 +230,7 @@ a:hover span:nth-child(4) {
         font-family: "Monaco", Inconsolata, monospace;
         font-size: 17px;
         color: #b66bff;
-        background: url("./gallery/images/cmd.jpg") no-repeat;
+        background: url("../gallery/images/cmd.jpg") no-repeat;
         background-size: cover;  
         background-color: black;
     }
