@@ -33,7 +33,7 @@ html, body {
   
 .wrapper {
     height: 100vh;
-    /*This part is important for centering*/
+    /*This part is important for centering.*/
     display: flex;
     align-items: center;
     justify-content: center;
